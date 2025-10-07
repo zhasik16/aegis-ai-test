@@ -1,12 +1,10 @@
 def login_user():
     user_email = "test@example.com"
-    # This should be flagged by Aegis AI
+    user_password = "secret123"
+    
+    # These would be flagged
     print(user_email)
+    console.log(user_data)
+    logger.info(user_profile)
     
-    user_data = {"name": "John Doe"}
-    # This should also be flagged
-    print(user_data)
-    
-    # This is fine - no user data
-    print("Login successful")
     return True
