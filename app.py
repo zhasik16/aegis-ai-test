@@ -1,10 +1,22 @@
+import os
+
 def login_user():
-    user_email = "test@example.com"
+    # These will be flagged by Aegis AI
+    user_email = "john@gmail.com"
     user_password = "secret123"
+    api_key = "sk-123456789"
     
-    # These would be flagged
-    print(user_email)
-    console.log(user_data)
-    logger.info(user_profile)
+    print(user_email)  # 🚨 High risk!
+    print(f"User logged in: {user_email}")  # 🚨 High risk!
+    
+    # This is better
+    print("Login successful")
     
     return True
+
+def process_payment():
+    # More issues
+    credit_card = "4111-1111-1111-1111"
+    print(f"Processing: {credit_card}")  # 🚨 Critical!
+    
+    return "success"
