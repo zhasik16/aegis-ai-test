@@ -1,9 +1,4 @@
-def login_user(email, password):
-    # This is a potential PII leak!
-    print(user_email)
-    print("User logged in successfully")
-    
-def process_data(user_data):
-    # This is fine
-    print("Processing data")
-    return user_data.upper()
+def test_function():
+    user_email = "test@example.com"
+    print(user_email)  # This should be flagged
+    print("Hello world")  # This should NOT be flagged
